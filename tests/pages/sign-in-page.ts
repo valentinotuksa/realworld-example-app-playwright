@@ -5,12 +5,12 @@ export class SignInPage {
   readonly page: Page;
   readonly header: Header;
 
-  readonly signInButton: Locator;
+  readonly signInHeader: Locator;
 
   constructor(page: Page) {
     this.header = new Header(page);
     this.page = page;
-    this.signInButton = page.getByRole("heading", { name: "Sign in" });
+    this.signInHeader = page.getByRole("heading", { name: "Sign in" });
   }
 
   goto() {

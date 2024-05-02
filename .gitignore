@@ -50,4 +50,4 @@ Thumbs.db
 /playwright/.cache/
 
 # Lock file
-package-lock.json
+pnpm-lock.yaml

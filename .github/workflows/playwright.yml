@@ -16,7 +16,7 @@ jobs:
       - name: Install dependencies
         run: npm install -g pnpm && pnpm install
       - name: Install Angular CLI
-        run: pnpm install -g @angular/cli
+        run: pnpm install @angular/cli
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
       - name: Start Angular app

@@ -43,3 +43,8 @@ yarn-error.log
 # System Files
 .DS_Store
 Thumbs.db
+.tool-versions
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/

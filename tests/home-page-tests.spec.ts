@@ -20,7 +20,7 @@ test.describe("Test home page nav buttons", () => {
   });
 
   test("Check if home page nav button does not change your location", async () => {
-    homePage.header.homeNavButton.click();
+    await homePage.header.homeNavButton.click();
     expect(homePage.homeHeading).toHaveText("conduit", { timeout: 30000 });
   });
 

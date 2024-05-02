@@ -14,6 +14,6 @@ export class SignInPage {
   }
 
   goto() {
-    return this.page.goto("http://localhost:4200/login");
+    return this.page.goto("/login");
   }
 }

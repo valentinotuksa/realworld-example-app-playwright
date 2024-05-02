@@ -14,6 +14,6 @@ export class HomePage {
   }
 
   goto() {
-    return this.page.goto("http://localhost:4200/");
+    return this.page.goto("/");
   }
 }

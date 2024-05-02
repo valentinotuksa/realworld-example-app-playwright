@@ -20,6 +20,6 @@ export class SignUpPage {
   }
 
   goto() {
-    return this.page.goto("http://localhost:4200/register");
+    return this.page.goto("/register");
   }
 }

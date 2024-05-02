@@ -17,10 +17,12 @@ jobs:
         run: npm install -g pnpm && pnpm install
       - name: Install Angular CLI
         run: pnpm install @angular/cli
+      - name: Start Angular app
+        run: |
+          pnpm exec ng serve &
+          until nc -z localhost 4200; do sleep 1; done
       - name: Install Playwright Browsers
         run: pnpm exec playwright install --with-deps
-      - name: Start Angular app
-        run: pnpm exec ng serve
       - name: Run Playwright tests
         run: pnpm exec playwright test
       - uses: actions/upload-artifact@v4

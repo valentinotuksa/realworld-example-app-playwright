@@ -17,8 +17,8 @@ test.describe("Validate that the sign up page is working", () => {
     await signUpPage.passwordInput.fill(GenerateUser.password);
     await signUpPage.submitButton.click();
     const signedInHomePage = new SignedInHomePage(page);
-    expect(
-      signedInHomePage.signedInHeader.newArticleNavButton.isVisible(),
-    ).toBeTruthy();
+    await expect(
+      signedInHomePage.signedInHeader.newArticleNavButton,
+    ).toBeVisible();
   });
 });

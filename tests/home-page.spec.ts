@@ -12,7 +12,7 @@ test.describe("Test home page nav buttons", () => {
   });
 
   test("Check if home nav button is visible", async () => {
-    expect(homePage.header.homeNavButton.isVisible()).toBeTruthy();
+    await expect(homePage.header.homeNavButton).toBeVisible();
   });
 
   test("Check if home page nav button does not change your location", async () => {
@@ -21,7 +21,7 @@ test.describe("Test home page nav buttons", () => {
   });
 
   test("Check if sign in nav button is visible", async () => {
-    expect(homePage.header.signInNavButton.isVisible()).toBeTruthy();
+    await expect(homePage.header.signInNavButton).toBeVisible();
   });
 
   test("Check if sign in button sends you to sign in page", async ({
@@ -29,11 +29,11 @@ test.describe("Test home page nav buttons", () => {
   }) => {
     await homePage.header.signInNavButton.click();
     const signInPage = new SignInPage(page);
-    expect(signInPage.signInHeader).toHaveText(/sign in/i);
+    await expect(signInPage.signInHeader).toHaveText(/sign in/i);
   });
 
   test("Check if sign up nav button is visible", async () => {
-    expect(homePage.header.signUpNavButton.isVisible()).toBeTruthy();
+    await expect(homePage.header.signUpNavButton).toBeVisible();
   });
 
   test("Check if sign up button sends you to sign up page", async ({
@@ -41,6 +41,6 @@ test.describe("Test home page nav buttons", () => {
   }) => {
     await homePage.header.signUpNavButton.click();
     const signUpPage = new SignUpPage(page);
-    expect(signUpPage.signUpTitle).toHaveText(/sign up/i);
+    await expect(signUpPage.signUpTitle).toHaveText(/sign up/i);
   });
 });

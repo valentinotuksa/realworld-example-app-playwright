@@ -7,7 +7,7 @@ test.describe("Verify functionality of sign in page", () => {
 
   test.beforeEach(async ({ page }) => {
     signInPage = new SignInPage(page);
-    signInPage.goto();
+    await signInPage.goto();
   });
 
   test("Check if user can sign in with valid credentials", async ({ page }) => {
@@ -16,8 +16,8 @@ test.describe("Verify functionality of sign in page", () => {
     await signInPage.submitButton.click();
 
     const signedInHomePage = new SignedInHomePage(page);
-    expect(
-      signedInHomePage.signedInHeader.newArticleNavButton.isVisible(),
-    ).toBeTruthy();
+    await expect(
+      signedInHomePage.signedInHeader.newArticleNavButton,
+    ).toBeVisible();
   });
 });

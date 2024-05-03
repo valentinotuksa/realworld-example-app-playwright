@@ -13,7 +13,6 @@ test.describe("Test home page nav buttons", () => {
 
   test("Check if home nav button is visible", async () => {
     expect(homePage.header.homeNavButton.isVisible()).toBeTruthy();
-    // expect(homePage.header.homeNavButton).toHaveText(/home/i);
   });
 
   test("Check if home page nav button does not change your location", async () => {
@@ -23,7 +22,6 @@ test.describe("Test home page nav buttons", () => {
 
   test("Check if sign in nav button is visible", async () => {
     expect(homePage.header.signInNavButton.isVisible()).toBeTruthy();
-    // expect(homePage.header.signInNavButton).toHaveText(/sign in/i);
   });
 
   test("Check if sign in button sends you to sign in page", async ({
@@ -36,9 +34,6 @@ test.describe("Test home page nav buttons", () => {
 
   test("Check if sign up nav button is visible", async () => {
     expect(homePage.header.signUpNavButton.isVisible()).toBeTruthy();
-    // expect(homePage.header.signUpNavButton).toHaveText(/sign up/i, {
-    //   timeout: 30000,
-    // });
   });
 
   test("Check if sign up button sends you to sign up page", async ({

@@ -6,8 +6,8 @@ export class Header {
   readonly homeNavButton: Locator;
 
   constructor(page: Page) {
-    this.homeNavButton = page.getByRole("link", { name: "Home" });
-    this.signInNavButton = page.getByRole("link", { name: "Sign in" });
-    this.signUpNavButton = page.getByRole("link", { name: "Sign up" });
+    this.homeNavButton = page.getByRole("link", { name: /home/i });
+    this.signInNavButton = page.getByRole("link", { name: /sign in/i });
+    this.signUpNavButton = page.getByRole("link", { name: /sign up/i });
   }
 }

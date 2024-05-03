@@ -9,6 +9,7 @@ export class SignUpPage {
   readonly usernameInput: Locator;
   readonly emailInput: Locator;
   readonly passwordInput: Locator;
+  readonly submitButton: Locator;
 
   constructor(page: Page) {
     this.header = new Header(page);
@@ -17,6 +18,7 @@ export class SignUpPage {
     this.usernameInput = page.getByPlaceholder(/username/i);
     this.emailInput = page.getByPlaceholder(/email/i);
     this.passwordInput = page.getByPlaceholder(/password/i);
+    this.submitButton = page.getByRole("button", { name: /sign up/i });
   }
 
   goto() {

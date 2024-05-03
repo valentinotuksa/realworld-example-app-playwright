@@ -6,11 +6,17 @@ export class SignInPage {
   readonly header: Header;
 
   readonly signInHeader: Locator;
+  readonly emailInput: Locator;
+  readonly passwordInput: Locator;
+  readonly submitButton: Locator;
 
   constructor(page: Page) {
     this.header = new Header(page);
     this.page = page;
     this.signInHeader = page.getByRole("heading", { name: /sign in/i });
+    this.emailInput = page.getByPlaceholder(/email/i);
+    this.passwordInput = page.getByPlaceholder(/password/i);
+    this.submitButton = page.getByRole("button", { name: /sign in/i });
   }
 
   goto() {

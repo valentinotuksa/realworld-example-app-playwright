@@ -3,7 +3,7 @@ import { SignUpPage } from "./pages/sign-up-page";
 import { SignedInHomePage } from "./pages/signed-in-home-page";
 import { GenerateUser } from "./util/generateUser";
 
-test.describe("Validate that the sign up page is working", () => {
+test.describe.parallel("Validate that the sign up page is working", () => {
   let signUpPage: SignUpPage;
 
   test.beforeEach(async ({ page }) => {

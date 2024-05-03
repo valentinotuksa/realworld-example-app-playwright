@@ -3,7 +3,7 @@ import { HomePage } from "./pages/home-page";
 import { SignInPage } from "./pages/sign-in-page";
 import { SignUpPage } from "./pages/sign-up-page";
 
-test.describe("Test home page nav buttons", () => {
+test.describe.parallel("Test home page nav buttons", () => {
   let homePage: HomePage;
 
   test.beforeEach(async ({ page }) => {

@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 import { SignInPage } from "./pages/sign-in-page";
 import { SignedInHomePage } from "./pages/signed-in-home-page";
 
-test.describe("Verify functionality of sign in page", () => {
+test.describe.parallel("Verify functionality of sign in page", () => {
   let signInPage: SignInPage;
 
   test.beforeEach(async ({ page }) => {

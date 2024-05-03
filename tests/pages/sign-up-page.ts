@@ -13,10 +13,10 @@ export class SignUpPage {
   constructor(page: Page) {
     this.header = new Header(page);
     this.page = page;
-    this.signUpTitle = page.getByRole("heading", { name: "Sign up" });
-    this.usernameInput = page.getByPlaceholder("Username");
-    this.emailInput = page.getByPlaceholder("Email");
-    this.passwordInput = page.getByPlaceholder("Password");
+    this.signUpTitle = page.getByRole("heading", { name: /sign up/i });
+    this.usernameInput = page.getByPlaceholder(/username/i);
+    this.emailInput = page.getByPlaceholder(/email/i);
+    this.passwordInput = page.getByPlaceholder(/password/i);
   }
 
   goto() {

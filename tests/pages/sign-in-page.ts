@@ -10,7 +10,7 @@ export class SignInPage {
   constructor(page: Page) {
     this.header = new Header(page);
     this.page = page;
-    this.signInHeader = page.getByRole("heading", { name: "Sign in" });
+    this.signInHeader = page.getByRole("heading", { name: /sign in/i });
   }
 
   goto() {

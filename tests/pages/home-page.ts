@@ -10,7 +10,7 @@ export class HomePage {
   constructor(page: Page) {
     this.header = new Header(page);
     this.page = page;
-    this.homeHeading = page.getByRole("heading", { name: "conduit" });
+    this.homeHeading = page.getByRole("heading", { name: /conduit/i });
   }
 
   goto() {

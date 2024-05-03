@@ -22,6 +22,6 @@ export class SignUpPage {
   }
 
   goto() {
-    return this.page.goto("/register");
+    return this.page.goto("/register", { waitUntil: "domcontentloaded" });
   }
 }

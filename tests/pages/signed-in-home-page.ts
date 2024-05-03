@@ -11,6 +11,6 @@ export class SignedInHomePage {
   }
 
   goto() {
-    return this.page.goto("/");
+    return this.page.goto("/", { waitUntil: "domcontentloaded" });
   }
 }

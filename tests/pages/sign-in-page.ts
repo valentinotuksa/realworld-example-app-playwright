@@ -20,6 +20,6 @@ export class SignInPage {
   }
 
   goto() {
-    return this.page.goto("/login");
+    return this.page.goto("/login", { waitUntil: "domcontentloaded" });
   }
 }
